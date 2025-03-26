@@ -9,85 +9,62 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">
-                <img src="images/logo.png" alt="Future Scholars Society Logo" class="logo">
-            </a>
-            <ul class="nav-links">
+            <a href="index.html"><img src="images/logo.png" alt="Future Scholars Society Logo" class="logo"></a>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="mission.html">Our Mission</a></li>
                 <li><a href="programs.html">Programs</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="about-container">
+    <main>
+        <!-- Mission Section -->
         <section class="mission">
             <h1>Our Mission</h1>
-            <p>Future Scholars Society is dedicated to <strong>teaching the future scholars of tomorrow</strong> through project-based learning, alternative education models, and advocacy for better educational funding and policies. We believe that every student deserves access to high-quality education that prepares them for the real world.</p>
+            <p>Future Scholars Society is dedicated to revolutionizing education through project-based learning, alternative education models, and advocacy for better classroom resources and policies. We believe in **Teaching the Future Scholars of Tomorrow** by creating engaging learning opportunities that empower students beyond traditional classroom settings.</p>
         </section>
 
-        <section class="staff">
+        <!-- Executive Team Section -->
+        <section class="executive-team">
             <h2>Meet Our Executive Team</h2>
-            <div class="staff-grid">
-                <div class="staff-card">
+            <div class="executive-container">
+                <div class="executive" onmouseover="showExecBio(0)" onmouseout="hideExecBio()">
                     <img src="images/landen.jpg" alt="Landen Nelson">
-                    <div class="staff-bio">
-                        <h3>Landen Nelson</h3>
-                        <p>Chief Executive Scholar - Leading the Future Scholars Society with a passion for innovative education.</p>
-                    </div>
                 </div>
-                <div class="staff-card">
+                <div class="executive-bio" id="exec-bio">
+                    <h3 id="exec-name"></h3>
+                    <h4 id="exec-title"></h4>
+                    <p id="exec-text"></p>
+                </div>
+                <div class="executive" onmouseover="showExecBio(1)" onmouseout="hideExecBio()">
                     <img src="images/binh.jpg" alt="Binh Haven">
-                    <div class="staff-bio">
-                        <h3>Binh Haven</h3>
-                        <p>Vice Chief Executive Scholar - Advocating for better educational policies and student resources.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Council of Scholars Section -->
         <section class="council">
-            <h2>Meet Our Council of Scholars</h2>
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <img src="images/savannah.jpg" alt="Savannah Myers">
-                    <div class="staff-bio">
-                        <h3>Savannah Myers</h3>
-                        <p>Human Resources Director - Ensuring a strong, well-supported team for the organization.</p>
-                    </div>
+            <h2>Meet the Council of Scholars</h2>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img src="images/savannah.jpg" alt="Savannah Myers" onclick="showScholarBio(0)">
+                    <img src="images/ella.jpg" alt="Ella Colley" onclick="showScholarBio(1)">
+                    <img src="images/landen.jpg" alt="Landen Nelson" onclick="showScholarBio(2)">
+                    <img src="images/ava.jpg" alt="Ava Adams" onclick="showScholarBio(3)">
+                    <img src="images/cohen.jpg" alt="Cohen McCormack" onclick="showScholarBio(4)">
                 </div>
-                <div class="staff-card">
-                    <img src="images/ella.jpg" alt="Ella Colley">
-                    <div class="staff-bio">
-                        <h3>Ella Colley</h3>
-                        <p>Public Relations Director - Managing external communication and branding.</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="images/landen.jpg" alt="Landen Nelson">
-                    <div class="staff-bio">
-                        <h3>Landen Nelson</h3>
-                        <p>Program Director - Overseeing educational programs and initiatives.</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="images/ava.jpg" alt="Ava Adams">
-                    <div class="staff-bio">
-                        <h3>Ava Adams</h3>
-                        <p>Finance Director - Managing budgeting and financial resources.</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="images/cohen.jpg" alt="Cohen McCormack">
-                    <div class="staff-bio">
-                        <h3>Cohen McCormack</h3>
-                        <p>Research & Policy Advocacy Director - Leading educational policy and advocacy efforts.</p>
-                    </div>
-                </div>
+            </div>
+            <div class="scholar-bio" id="scholar-bio">
+                <h3 id="scholar-name"></h3>
+                <h4 id="scholar-title"></h4>
+                <p id="scholar-text"></p>
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
