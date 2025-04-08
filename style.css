@@ -1,161 +1,128 @@
-/* General Styles */
 body {
-    font-family: 'Futuristica', sans-serif;
-    background-color: #0a0027;
-    color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom right, #1a0033, #330066);
+  color: white;
+  overflow-x: hidden;
 }
 
-/* Navigation Bar */
+.stars {
+  background: url('images/stars.png') repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+  position: relative;
+}
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #14004b;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: relative;
 }
 
 .nav-left, .nav-right {
-    display: flex;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-left li, .nav-right li {
-    margin: 0 15px;
+.nav-left li a, .nav-right li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-.nav-left a, .nav-right a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+.nav-left li a:hover, .nav-right li a:hover {
+  color: #a28fff;
 }
 
-.nav-logo {
-    background: white;
-    border-radius: 50%;
-    padding: 10px;
+.logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-logo img {
-    width: 20px;
+.logo {
+  width: 80px;
+  height: 80px;
+  z-index: 3;
 }
 
-/* Hero Section */
-.hero {
-    margin-top: 100px;
-    position: relative;
+.logo-curve {
+  position: absolute;
+  bottom: -10px;
+  width: 100px;
+  height: 50px;
+  background: #330066;
+  border-radius: 0 0 100px 100px;
+  z-index: 2;
 }
 
-.hero img {
-    width: 50%;
-    height: 100x;
-    object-fit: cover;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 60px;
+  z-index: 1;
+  position: relative;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px 30px;
-    border-radius: 10px;
+.hero-card {
+  text-align: center;
+  max-width: 600px;
 }
 
-/* Info Cards */
-.info-section {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
 }
 
-.info-card {
-    position: relative;
-    width: 20px;
-    margin: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  width: 300px;
 }
 
-.info-card img {
-    width: 100%;
-    border-radius: 10px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-.card-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Contact Section */
-.contact-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    color: black;
-    padding: 50px;
-}
-
-.contact-text {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-}
-
-.contact-text h2 {
-    font-size: 28px;
-}
-
-.contact-text a {
-    color: #14004b;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.contact-image {
-    flex: 1;
-}
-
-.contact-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #14004b;
-    padding: 20px;
-}
-
-.footer-info {
-    text-align: left;
-}
-
-.footer-logo img {
-    width: 60px;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 0 5px;
+h1, h2 {
+  font-family: 'Fugaz One', cursive;
+  margin-bottom: 10px;
 }
 
