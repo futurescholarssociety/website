@@ -8,7 +8,7 @@ body {
 }
 
 .stars {
-  background: url('images/shooting-star.png') repeat;
+  background: url('images/shooting-star.png')
   position: fixed;
   top: 0;
   left: 0;
